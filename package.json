@@ -1,0 +1,22 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brandon frye",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.4",
+    "del": "^2.0.2",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-cache": "^0.3.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-sass": "^2.0.4",
+    "run-sequence": "^1.1.3"
+  }
+}
