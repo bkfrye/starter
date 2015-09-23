@@ -8,6 +8,7 @@
   },
   "author": "brandon frye",
   "license": "ISC",
+  "url": "https://github.com/bkfrye/starter",
   "devDependencies": {
     "browser-sync": "^2.9.4",
     "del": "^2.0.2",
