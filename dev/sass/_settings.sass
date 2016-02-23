@@ -1,11 +1,22 @@
-//Color variables
+//@import "bower_components/foundation/scss/foundation/components/_grid"
+//@import "bower_components/foundation/scss/foundation/components/_progress-bars"
 
-@import "bower_components/foundation/scss/foundation/components/_grid"
-//@import "bower_components/foundation/scss/foundation/components/_block-grid"
-//@import "bower_components/foundation/scss/foundation/components/_flex-video"
+//---------------------
+//    Set colors
+//---------------------
 
 
 
+//---------------------
+//    Fonts
+//---------------------
+
+
+
+
+//---------------------
+//    Breakpoints and Media Queries
+//---------------------
 $phone-width: 640px
 $tablet-width: 1024px
 $desktop-width: 1440px
@@ -18,3 +29,49 @@ $desktop-width: 1440px
 @mixin tablet 
   @media (max-width: #{$tablet-width}) 
     @content
+
+@mixin tablet-only 
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) 
+    @content
+
+
+
+//---------------------
+//    Other 
+//---------------------
+
+
+// Placeholders
+%valign
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    
+    
+// Mixins
+@mixin box-sizing($type) 
+  -webkit-box-sizing: $type
+     -moz-box-sizing: $type
+          box-sizing: $type
+
+
+@mixin linx ($link, $visit, $hover, $active) 
+  a 
+    color: $link
+    
+    &:visited
+      color: $visit
+    
+    &:hover
+      color: $hover
+    
+    &:active
+      color: $active
+    
+    
+@mixin valign ($this)
+    @extend %valign
+    
+    
+
+    
