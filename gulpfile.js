@@ -23,7 +23,7 @@ gulp.task('browserSync', function() {
 
 // Run SCSS tasks
 gulp.task('styles', function() {
-  return gulp.src('dev/sass/*.sass')
+  return gulp.src('dev/scss/*.scss')
     .pipe(sass({
       'sourcemap=none': true
     }))
@@ -68,7 +68,7 @@ gulp.task('images', function(){
 
 //Watch files in /dev
 gulp.task('watch', ['browserSync'], function() {
-    gulp.watch('dev/sass/*.sass', ['styles']);
+    gulp.watch('dev/scss/*.scss', ['styles']);
     gulp.watch('dev/*.html', ['html']);
     gulp.watch('dev/js/*.js', ['js']);
     gulp.watch('dev/img/*.+(png|jpg|gif|svg)', ['images']);
