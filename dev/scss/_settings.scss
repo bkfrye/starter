@@ -44,6 +44,8 @@ $desktop-width: 1440px;
   transform: translateY(-50%);
 }
 
+
+
 // Mixins
 @mixin box-sizing($type) {
   -webkit-box-sizing: $type;
@@ -68,6 +70,41 @@ $desktop-width: 1440px;
     }
   }
 }
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 
 @mixin valign($this) {
   @extend %valign;
